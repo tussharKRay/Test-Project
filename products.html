@@ -1,0 +1,36 @@
+<div ng-controller = 'newCtrl'>
+	<!--<div ng-repeat = 'res in response'>
+			<h5>{{res.Product_Id}}</h5>
+			<h5>{{res.Product_Name}}</h5>	
+				<div>
+					<h5>Daily :{{res.Product_Price.Daily}}</h5>
+					<h5>Weekly :{{res.Product_Price.Weekly}}</h5>
+					<h5>Monthly :{{res.Product_Price.Monthly}}</h5>
+				</div>
+			<h5>{{res.Product_Image.ProductImage_Path}}</h5>
+			<h5><img src ="{{res.Product_Image}}"></h5>
+			
+		</div>
+-->	
+		<div class="row topcontainer">
+			<div class="col-md-4 innercontainer" ng-repeat = 'res in response'>
+		
+				<a href="#/add">
+					<img ng-src="{{res.Product_Image[0].ProductImage_Path}}" alt="{{res.Product_Name}}">
+				</a>
+				<div class="bottomcontainer">
+
+					<a><h4><b>{{res.Product_Name}}</b></h4></a>
+					<p>by <a href="#/">Vendor name</a></p>
+						<div class="col-md-4"><div>Daily</div>{{res.Product_Price.Daily | currency}}</div>
+						<div class="col-md-4"><div>Weekly</div>{{res.Product_Price.Weekly |currency}}</div>
+						<div class="col-md-4"><div>Monthly</div>{{res.Product_Price.Monthly |currency}}</div>
+					<button class="buy">Add to cart</button>
+					<button class="star">Rate</button>
+				</div>
+			</div>
+			<p>Coming soon</p>
+
+		
+	
+</div>
