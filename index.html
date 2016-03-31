@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app = "myApp">
+<head>
+	<title>Test Project</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link href = "app/css/style.css" rel="stylesheet">
+</head>
+<body ng-controller = "myController">
+<header class = "header">
+	<h2>This is header<h2>
+	<hr/>
+</header>
+<div>
+	<!--Test texts-->
+	{{5+7}}
+	{{msg}}
+	{{response[0].Product_Id}}
+	<!--Test texts-->
+<!--	<div ng-repeat = 'res in response'>
+		<h5>{{res.Product_Id}}</h5>
+		<h5>{{res.Product_Name}}</h5>	
+			<div>
+				<h5>Daily :{{res.Product_Price.Daily}}</h5>
+				<h5>Weekly :{{res.Product_Price.Weekly}}</h5>
+				<h5>Monthly :{{res.Product_Price.Monthly}}</h5>
+			</div>
+		<h5>{{res.Product_Image.ProductImage_Path}}</h5>
+		<h5><img src ="{{res.Product_Image}}"></h5>
+		
+	</div>
+-->
+    <a href="#/items">View all items</a>
+</div>
+
+<div class = 'page-wrap' >
+	<div ng-view></div>
+</div>
+
+
+
+
+
+
+<footer class="site-footer">
+<hr/>
+        <h2 style="align : center">This is footer</h2>
+        <div class="container-fluid"> &copy; Copyright 2015, Test Shopping Site </div>
+</footer>
+
+
+
+
+
+
+<script src = "app/angular/angular.min.js"></script>    
+<script src = "app/app.js"></script>
+<script src = "app/controllers/itemsCtrl.js"></script>
+<script src = "app/controllers/indexCtrl.js"></script>
+<script src = "node_modules/angular-route/angular-route.js"></script>
+</body>
+</html>
